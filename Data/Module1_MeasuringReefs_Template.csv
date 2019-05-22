@@ -1,0 +1,50 @@
+reef_no,replicate,perimeter_m,area_m2,diam_longest_m,diam_perpendic_m,imagery_resolution_m,date,method,platform,imagery_type,provider,instrument,observer,notes
+19,1,143,946,,,0.15,20130115,imagery,Google Earth,aerial,unknown,unknown,MICG,PR19_0.15_01_MICG
+19,2,116,1002,,,0.15,20130115,imagery,Google Earth,aerial,unknown,unknown,MICG,PR19_0.15_02_MICG
+19,1,127.06,1069.22,,,0.5,20130822,imagery,Google Earth,satellite,DigitalGlobe,"WorldView-1/2, GeoEye-1, or Quickbird",MICG,PR19_0.5_01_MICG
+19,2,128,1246,,,0.5,20130822,imagery,Google Earth,satellite,DigitalGlobe,"WorldView-1/2, GeoEye-1, or Quickbird",MICG,PR19_0.5_02_MICG
+19,1,131.71,1310.75,,,1,20110108,imagery,Google Earth,satellite,DigitalGlobe,Ikonos,MICG,PR19_1_01_MICG
+19,2,134,1319,,,1,20110108,imagery,Google Earth,satellite,DigitalGlobe,Ikonos,MICG,PR19_1_02_MICG
+19,1,134.09,1218.99,,,2,20030412,imagery,Google Earth,satellite,DigitalGlobe,EarlyBird-1 (not 100% sure),MICG,
+19,2,123.3,1137.32,,,2,20030412,imagery,Google Earth,satellite,DigitalGlobe,EarlyBird-1 (not 100% sure),MICG,PR19_2_2_MICG
+19,1,94.6,8462,,,3,20190316,imagery,PlanetExplorer,satellite,Planet,PlanetScope (formerly Dove CubeSats),MICG,PR19_2_01_MICG
+19,2,115.58,6310,,,3,20190316,imagery,PlanetExplorer,satellite,Planet,PlanetScope (formerly Dove CubeSats),MICG,
+19,1,107.6,8864,,,5,20160208,imagery,PlanetExplorer,satellite,Planet,RapidEye,MICG,
+19,2,105,9880,,,5,20160208,imagery,PlanetExplorer,satellite,Planet,RapidEye,MICG,
+19,1,110.8,1050,,,10,20180307,imagery,PlanetExplorer,satellite,ESA,Sentinel-2,MICG,
+19,2,104,819,,,10,20180307,imagery,PlanetExplorer,satellite,ESA,Sentinel-2,MICG,
+19,1,99,682.2,,,30,20190328,imagery,PlanetExplorer,satellite,USGS,Landsat 8,MICG,
+19,2,83,643.81,,,30,20190328,imagery,PlanetExplorer,satellite,USGS,Landsat 8,MICG,
+16,1,268,2713,,,0.15,20130115,imagery,Google Earth,aerial,unknown,unknown,MICG,PR16_0.15_01_MICG
+16,2,199,2982,,,0.15,20130115,imagery,Google Earth,aerial,unknown,unknown,MICG,PR16_0.15_02_MICG
+16,1,234.54,3345.86,,,0.5,20130822,imagery,Google Earth,satellite,DigitalGlobe,"WorldView-1/2, GeoEye-1, or Quickbird",MICG,PR16_0.5_01_MICG
+16,2,236,4255,,,0.5,20130822,imagery,Google Earth,satellite,DigitalGlobe,"WorldView-1/2, GeoEye-1, or Quickbird",MICG,PR16_0.5_02_MICG
+16,1,201.2,2971.42,,,1,20110108,imagery,Google Earth,satellite,DigitalGlobe,Ikonos,MICG,PR16_1_01_MICG
+16,2,198,2917,,,1,20110108,imagery,Google Earth,satellite,DigitalGlobe,Ikonos,MICG,PR16_1_02_MICG
+16,1,218.17,3397.7,,,2,20030412,imagery,Google Earth,satellite,DigitalGlobe,EarlyBird-1 (not 100% sure),MICG,PR16_2_01_MICG
+16,2,215.1,3298,,,2,20030412,imagery,Google Earth,satellite,DigitalGlobe,EarlyBird-1 (not 100% sure),MICG,PR16_2_02_MICG
+16,1,198.52,3561,,,3,20190316,imagery,PlanetExplorer,satellite,Planet,PlanetScope (formerly Dove CubeSats),MICG,
+16,2,190,3220,,,3,20190316,imagery,PlanetExplorer,satellite,Planet,PlanetScope (formerly Dove CubeSats),MICG,
+16,1,198,3120,,,5,20160208,imagery,PlanetExplorer,satellite,Planet,RapidEye,MICG,
+16,2,189,3311,,,5,20160208,imagery,PlanetExplorer,satellite,Planet,RapidEye,MICG,
+16,1,194.13,3929,,,10,20180307,imagery,PlanetExplorer,satellite,ESA,Sentinel-2,MICG,
+16,2,208,3090,,,10,20180307,imagery,PlanetExplorer,satellite,ESA,Sentinel-2,MICG,
+16,1,187.2,3290,,,30,20190328,imagery,PlanetExplorer,satellite,USGS,Landsat 8,MICG,
+16,2,181.28,3110,,,30,20190328,imagery,PlanetExplorer,satellite,USGS,Landsat 8,MICG,
+12,1,456.94,12654.77,,,0.15,20130115,imagery,Google Earth,aerial,unknown,unknown,MICG,PR12_0.15_01_MICG
+12,2,419,13275,,,0.15,20130115,imagery,Google Earth,aerial,unknown,unknown,MICG,PR12_0.15_02_MICG
+12,1,382.96,10782.91,,,0.5,20130822,imagery,Google Earth,satellite,DigitalGlobe,"WorldView-1/2, GeoEye-1, or Quickbird",MICG,PR12_0.5_01_MICG
+12,2,390,11638,,,0.5,20130822,imagery,Google Earth,satellite,DigitalGlobe,"WorldView-1/2, GeoEye-1, or Quickbird",MICG,PR12_0.5_02_MICG
+12,1,384.13,10761.04,,,1,20110108,imagery,Google Earth,satellite,DigitalGlobe,Ikonos,MICG,PR12_1_01_MICG
+12,2,365,10122,,,1,20110108,imagery,Google Earth,satellite,DigitalGlobe,Ikonos,MICG,PR12_1_02_MICG
+12,1,432.08,12026.25,,,2,20030412,imagery,Google Earth,satellite,DigitalGlobe,EarlyBird-1 (not 100% sure),MICG,PR12_2_01_MICG
+12,2,404,12136,,,2,20030412,imagery,Google Earth,satellite,DigitalGlobe,EarlyBird-1 (not 100% sure),MICG,PR12_2_02_MICG
+12,1,392.56,9830,,,3,20190316,imagery,PlanetExplorer,satellite,Planet,PlanetScope (formerly Dove CubeSats),MICG,
+12,2,337.44,8670,,,3,20190316,imagery,PlanetExplorer,satellite,Planet,PlanetScope (formerly Dove CubeSats),MICG,
+12,1,388.96,1140,,,5,20160208,imagery,PlanetExplorer,satellite,Planet,RapidEye,MICG,
+12,2,390,1059,,,5,20160208,imagery,PlanetExplorer,satellite,Planet,RapidEye,MICG,
+12,1,365.11,1128,,,10,20180307,imagery,PlanetExplorer,satellite,ESA,Sentinel-2,MICG,
+12,2,368,1042,,,10,20180307,imagery,PlanetExplorer,satellite,ESA,Sentinel-2,MICG,
+12,1,341.63,1024,,,30,20190328,imagery,PlanetExplorer,satellite,USGS,Landsat 8,MICG,
+12,2,357.63,1017,,,30,20190328,imagery,PlanetExplorer,satellite,USGS,Landsat 8,MICG,
+,,,,,,30,20190328,imagery,PlanetExplorer,satellite,USGS,Landsat 8,MICG,
