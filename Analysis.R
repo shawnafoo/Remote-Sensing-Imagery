@@ -14,8 +14,15 @@ merged <- rbind(Module1_MeasuringReefs_SF, ASL_data, Module1_MeasuringReefs_AC,
 merged <- merged[!(merged$reef_no == "12" & merged$method == "field"),]
 
 
+#method = field
+#area = NA
 
-d<-d[!(d$A=="B" & d$E==0),]
+merged <- merged[!(merged$method == "field" & merged$area_m2 == "NA"),]
+
+merged[rowSums(is.na(merged)) !=ncol(merged),]
+
+
+m[rowSums(is.na(m)) != ncol(m), ]
 
 
 library(xlsx)
