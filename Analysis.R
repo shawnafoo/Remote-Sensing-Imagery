@@ -19,10 +19,12 @@ merged <- merged[!(merged$reef_no == "12" & merged$method == "field"),]
 
 merged <- merged[!(merged$method == "field" & merged$area_m2 == "NA"),]
 
-merged[rowSums(is.na(merged)) !=ncol(merged),]
+##Remove all NA rows 
+library(dplyr)
 
+merged <- merged %>% filter_all(any_vars(complete.cases(.)))
 
-m[rowSums(is.na(m)) != ncol(m), ]
+df %>% filter_all(any_vars(complete.cases(.))) 
 
 
 library(xlsx)
