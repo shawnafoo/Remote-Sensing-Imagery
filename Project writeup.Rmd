@@ -1,0 +1,125 @@
+---
+title: "Analysis"
+output: html_document
+---
+
+```{r data import, echo=FALSE, results='hide', include=FALSE}
+
+data<-read.csv("groupdata.csv", header = TRUE)
+names(data)
+head(data)
+data$year<-substr(data$date,0,4) # add a column for year only
+
+```
+
+
+# Introduction
+
+Comparing the accuracy of field measurements of patch reefs versus using satellite imagery to measure patch reefs in Kanoehe Bay.
+
+
+# Methods
+
+We measured the perimeter and diameter x 2 of three differently sized patch reefs (19, 16 and 12) in Kanoehe Bay. The same reefs were also measured in Planet Explorer and Google Earth Pro using satellite imagery of varying resolutions, from 0.15 to 30 m resolution.
+
+
+# Results
+
+##Effect of method (field vs imagery) on accuracy of patch reef area measurement
+
+```{r data explore-1, echo=FALSE, results='hide', fig.height=5, fig.width=5, fig.align='center'}
+################################################
+# explore patterns
+################################################
+
+# Effect of method
+plot(area_m2~method, data=data, na.ignore=TRUE, col="lightgrey",
+     ylab="Patch reef area (m^2)", 
+     xlab="Method", 
+     main="Area versus method")
+dev.copy(pdf,"figs/method_area_effect.pdf")    # can change to .png, etc.; can change size to incr resolution
+dev.off()
+
+```
+
+##Effect of method (field vs imagery) on accuracy of patch reef area measurement with only high resolution (0.15m) imagery
+```{r, echo=FALSE}
+# Plotting only the high resolution data
+
+data_temp <- data[data$method == "field" | data$imagery_resolution_m == 0.15,]
+
+plot(area_m2~method, data=data_temp, na.ignore=TRUE, col="lightgrey",
+     ylab="Patch reef area (m^2)", 
+     xlab="Method", 
+     main="Area versus method")
+dev.copy(pdf,"figs/method_area_effect.pdf")    # can change to .png, etc.; can change size to incr resolution
+dev.off()
+```
+
+##Effect of resolution on measurement accuracy
+
+```{r, echo=FALSE}
+# Effect of imagery resolution
+plot(area_m2~imagery_resolution_m, data=data, col="slategrey",
+     xlim=c(0,10),
+     xlab="Imagery spatial resolution (m)", 
+     ylab="Patch reef area (m^2)", 
+     main="Area versus imagery resolution")
+res.area.lm=lm(area_m2 ~ imagery_resolution_m, data=data)
+abline(res.area.lm, col = "black")
+summary(res.area.lm)
+dev.copy(pdf,"figs/resolution_area_effect.pdf")    
+dev.off()
+plot(perimeter_m~imagery_resolution_m, data=data, col="slategrey",
+     xlim=c(0,10),
+     xlab="Imagery spatial resolution (m)", 
+     ylab="Patch reef perimeter (m)", 
+     main="Perimeter versus imagery resolution")
+res.perim.lm=lm(perimeter_m ~ imagery_resolution_m, data=data)
+abline(res.perim.lm, col = "black")
+summary(res.perim.lm)
+dev.copy(pdf,"figs/resolution_perimeter_effect.pdf")    
+dev.off()
+```
+
+
+##Effect of year on reef measurement
+```{r, echo=FALSE}
+# Effect of date (i.e., do patch reefs measureably grow or shrink over time?)
+plot(area_m2~as.numeric(year), data=data, col="slategrey",
+     xlab="Year", 
+     ylab="Patch reef area (m^2)", 
+     main="Area versus year")
+date.area.lm=lm(area_m2 ~ as.numeric(year), data=data)
+abline(date.area.lm, col = "black")
+summary(date.area.lm)
+dev.copy(pdf,"figs/date_area_effect.pdf")    
+dev.off()
+```
+
+When considering image resolution, there were no significant effects on measurement accuracy
+
+```{r data analysis-1, echo=FALSE, results='hide', fig.height=5, fig.width=5, fig.align='center'}
+################################################
+# analyze data
+################################################
+# Effects of imagery resolution + year
+res.year.lm=lm(area_m2 ~ imagery_resolution_m * as.numeric(year), data=data)
+summary(res.year.lm)
+```
+
+Or reef identity (number):
+
+```{r data analysis-2, echo=FALSE, results='hide', fig.height=5, fig.width=5, fig.align='center'}
+################################################
+# analyze data
+################################################
+# Effects of imagery resolution + reef ID
+res.reefID.lm=lm(area_m2 ~ imagery_resolution_m * reef_no, data=data)
+summary(res.reefID.lm)
+```
+
+
+## Discussion
+
+Field measurements of patch reefs were less variable than using satellite imagery. Furthermore, the reefs do not appear to significantly grow over time which means that we are able to use a range of years of satellite imagery for our analysis.
